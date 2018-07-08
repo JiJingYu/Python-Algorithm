@@ -27,8 +27,7 @@ class Solution:
                 for second_2 in cache[target-key]:
                     if set(first_2) & set(second_2):
                         continue
-                    ans = [nums[i] for i in first_2 + second_2]
-                    ans.sort()
+                    ans = sorted([nums[i] for i in first_2 + second_2])
                     if ans not in res:
                         res.append(ans)
         return res
